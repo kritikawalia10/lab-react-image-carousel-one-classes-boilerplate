@@ -1,1 +1,32 @@
-/* write your carousel css in this file */
+.left,.right{
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    margin: 3%;
+}
+.contain{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+.left:hover,.right:hover{
+    background-color: blue;
+}
+img{
+    width: 500px;
+    height: 600px;
+}
+.text{
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgba(242, 235, 235, 0.096);
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    width: 170px;
+    text-align: center;
+    position: relative;
+    color: black;
+    bottom: 520px;
+}

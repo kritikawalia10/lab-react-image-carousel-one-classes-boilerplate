@@ -7,7 +7,45 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 // implement the class below
 class Carousel extends Component {
+  constructor(){
+    super()
+    this.state = {
+        count :0
+    }
+  }
+ more=()=>{
+    if(this.state.count<2){
+        this.setState({count : this.state.count+1})
+    } else if(this.state.count>=2){
+        this.setState({count : 0})
+    }
+  }
+  less=()=>{
+    if(this.state.count>0){
+        this.setState({count : this.state.count-1})
+    } else if(this.state.count<=0){
+        this.setState({count:2})
+    }
+  }
   
+  render(){
+    return(
+    <>
+    <div className="contain">
+        <div className="left" onClick={this.less}>
+            <ArrowBackIosIcon/>
+        </div>
+        <img src={images[this.state.count].img} alt="" />
+        <div className="right" onClick={this.more}>
+            <ArrowForwardIosIcon/>
+        </div>
+    </div>
+    <div className="text">
+        {images[this.state.count].subtitle}
+    </div>
+    </>
+    )
+  }
 }
 
 export default Carousel;
