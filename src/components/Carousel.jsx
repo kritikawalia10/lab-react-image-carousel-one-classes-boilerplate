@@ -40,6 +40,9 @@ class Carousel extends Component {
             <ArrowForwardIosIcon/>
         </div>
     </div>
+      <div className="title">
+        {images[this.state.count].title}
+    </div>
     <div className="text">
         {images[this.state.count].subtitle}
     </div>
